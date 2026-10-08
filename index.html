@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team building et séminaires : 5 expériences food éco-responsables | Maison La Recette</title>
+<meta name="description" content="Téléchargez gratuitement le guide : 5 expériences food éco-responsables à vivre avec vos équipes, dans vos locaux ou chez nos chefs, artisans et producteurs.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Et si votre prochain événement d'équipe se passait autour d'une table ?">
+<meta property="og:description" content="Le guide gratuit : 5 expériences food éco-responsables pour vos équipes. Sans leçon de morale.">
+<meta name="theme-color" content="#61AF89">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --vert: #61AF89;
+    --vert-fonce: #295140;
+    --lime: #CFDB00;
+    --blanc: #ffffff;
+    --carotte: #E65A12;   /* orange décoratif des maquettes (code non fourni) */
+    --orange: #C9440E;    /* orange du bouton (code non fourni) */
+    --titre: "Montserrat", "Arial Black", system-ui, sans-serif;
+    --texte: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--texte);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--vert-fonce);
+    background: var(--blanc);
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--titre); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; margin: 0; }
+  p { margin: 0; }
+
+  :focus-visible { outline: 3px solid var(--vert-fonce); outline-offset: 4px; border-radius: 4px; }
+
+  .section { padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 64px); }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+
+  /* ---------- Logo ---------- */
+  .logo-lien { display: inline-block; line-height: 0; }
+  .logo { display: block; height: auto; }
+  .logo--haut { width: 84px; }
+  .logo--livre { width: 76px; margin-top: auto; }
+  .logo--pied { width: 96px; }
+
+  /* ---------- Boutons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; gap: .65rem;
+    font-family: var(--titre); font-weight: 800; font-size: 1.05rem; letter-spacing: -0.005em;
+    padding: 1rem 1.7rem; border-radius: 999px;
+    border: 2.5px solid var(--vert-fonce); background: var(--orange); color: #fff;
+    box-shadow: 4px 4px 0 var(--vert-fonce);
+    text-decoration: none; cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--vert-fonce); }
+  .btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--vert-fonce); }
+  .btn[disabled] { opacity: .7; cursor: wait; }
+  .btn svg { width: 1.2rem; height: 1.2rem; flex: none; }
+  .btn--clair { background: var(--lime); color: var(--vert-fonce); }
+  .lien-discret {
+    background: none; border: 0; padding: .4rem .2rem; cursor: pointer;
+    font: 700 1rem var(--texte); color: var(--vert-fonce); text-decoration: underline; text-underline-offset: 3px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; background: var(--vert); overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; left: 0; bottom: 0; width: clamp(90px, 14vw, 190px); height: clamp(110px, 18vw, 230px);
+    background: var(--carotte); clip-path: polygon(0 18%, 100% 100%, 0 100%);
+  }
+  .hero::after {
+    content: ""; position: absolute; right: 0; bottom: 0; width: 62%; height: clamp(90px, 14vw, 170px);
+    background: var(--lime); clip-path: polygon(14% 100%, 100% 0, 100% 100%);
+  }
+  .hero__bar { position: relative; z-index: 3; background: var(--vert-fonce); }
+  .hero__bar :focus-visible, .pied :focus-visible { outline-color: var(--lime); }
+  .topbar { position: relative; z-index: 2; max-width: calc(1120px + 2 * clamp(20px, 5vw, 64px)); margin: 0 auto; padding: 12px clamp(20px, 5vw, 64px); }
+  .hero__grille {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: clamp(32px, 5vw, 72px); align-items: center;
+    max-width: calc(1120px + 2 * clamp(20px, 5vw, 64px)); margin: 0 auto;
+    padding: clamp(16px, 3vw, 40px) clamp(20px, 5vw, 64px) clamp(120px, 16vw, 200px);
+  }
+  .tag {
+    display: inline-block; background: var(--lime); border: 2px solid var(--vert-fonce);
+    padding: .3rem .75rem; margin-bottom: 1.4rem;
+    font: 800 .7rem var(--titre); letter-spacing: .04em; text-transform: uppercase;
+    transform: rotate(-1.5deg);
+  }
+  .hero h1 { font-size: clamp(2.3rem, 5vw, 4rem); max-width: 18ch; }
+  .hero__sous-titre {
+    font-family: var(--texte); font-weight: 700; font-size: clamp(1.2rem, 1.8vw, 1.3rem); line-height: 1.5;
+    max-width: 34rem; margin-top: 1.5rem;
+  }
+  .hero__visuel { display: flex; flex-direction: column; align-items: center; min-width: 0; }
+  .hero__action { margin-top: 1.6rem; text-align: center; }
+  .hero__rassurance { margin-top: .7rem; font-size: 1rem; font-weight: 800; }
+  .hero__visuel .reveal { width: 100%; max-width: 34rem; }
+  .hero__visuel .nl { max-width: none; }
+
+  /* ---------- Couverture du guide ---------- */
+  .couverture { position: relative; justify-self: center; width: min(340px, 78vw); padding: 28px 0; }
+  .couverture__forme {
+    position: absolute; inset: 0 -14% 0 -14%; background: var(--carotte);
+    clip-path: polygon(6% 6%, 100% 0, 94% 100%, 0 90%); transform: rotate(-3deg);
+  }
+  .couverture::after {
+    content: ""; position: absolute; z-index: 0; top: -22px; right: -9%; width: 92px; height: 84px;
+    background: var(--lime); clip-path: polygon(50% 100%, 0 18%, 28% 0, 52% 38%, 78% 4%, 100% 24%);
+    transform: rotate(8deg);
+  }
+  .livre {
+    z-index: 1; position: relative; background: var(--vert-fonce); color: var(--blanc);
+    border: 3px solid var(--vert-fonce); box-shadow: 10px 10px 0 var(--vert-fonce);
+    padding: 26px 24px 22px; transform: rotate(3deg); min-height: 420px;
+    display: flex; flex-direction: column;
+  }
+  .livre__titre { font-family: var(--titre); font-weight: 900; font-size: 1.9rem; line-height: 1.02; letter-spacing: -0.02em; color: var(--lime); }
+  .livre__sous { font-weight: 700; margin-top: .9rem; font-size: 1.02rem; line-height: 1.4; }
+  .livre__table { position: relative; flex: 1; margin: 1.2rem 0 1rem; min-height: 120px; }
+  .livre__table svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .autocollant {
+    position: absolute; z-index: 3; bottom: 34px; right: -24px;
+    width: 104px; height: 104px; border-radius: 50%;
+    background: var(--lime); border: 3px solid var(--vert-fonce);
+    display: grid; place-items: center; text-align: center;
+    font: 900 1rem/1.05 var(--titre); transform: rotate(-12deg);
+  }
+
+  /* ---------- Panneau newsletter ---------- */
+  .reveal { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s cubic-bezier(.2,.7,.2,1); }
+  .reveal.est-ouvert { grid-template-rows: 1fr; }
+  .reveal__inner { min-height: 0; overflow: hidden; visibility: hidden; transition: visibility 0s .55s; padding: 0 12px 12px 0; }
+  .reveal.est-ouvert .reveal__inner { visibility: visible; transition-delay: 0s; }
+  .nl {
+    margin-top: 1.8rem; background: var(--blanc); border: 3px solid var(--vert-fonce); box-shadow: 8px 8px 0 var(--vert-fonce);
+    padding: clamp(20px, 3vw, 30px); max-width: 36rem; transform: rotate(-.6deg);
+  }
+  .nl:focus { outline: none; }
+  .nl__merci { font-weight: 700; font-size: .95rem; padding-bottom: 1rem; margin-bottom: 1.1rem; border-bottom: 2px dashed var(--vert-fonce); }
+  .nl h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+  .nl__texte { margin-top: .7rem; max-width: 32rem; }
+  .nl__form { margin-top: 1.2rem; display: grid; gap: .9rem; }
+  .nl label.champ { font-weight: 800; font-size: .95rem; display: block; margin-bottom: .3rem; }
+  .nl input[type="email"] {
+    width: 100%; font: 600 1.05rem var(--texte); padding: .85rem 1rem;
+    border: 2.5px solid var(--vert-fonce); border-radius: 12px; background: #fff; color: var(--vert-fonce);
+  }
+  .nl input[type="email"]::placeholder { color: #5f6f67; }
+  .consentement { display: flex; gap: .7rem; align-items: flex-start; font-size: .92rem; line-height: 1.45; }
+  .consentement input { width: 1.2rem; height: 1.2rem; margin-top: .15rem; accent-color: var(--orange); flex: none; }
+  .nl__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.2rem; }
+  .nl__erreur { display: none; }
+  .nl__erreur:not(:empty) {
+    display: flex; gap: .6rem; align-items: flex-start;
+    padding: .7rem .9rem; border: 2.5px solid var(--orange); border-radius: 12px; background: var(--blanc);
+    font-weight: 800; font-size: .95rem; line-height: 1.4;
+  }
+  .nl__erreur:not(:empty)::before {
+    content: "!"; flex: none; width: 1.35rem; height: 1.35rem; border-radius: 50%;
+    background: var(--orange); color: var(--blanc); display: grid; place-items: center; font: 900 .85rem var(--titre);
+  }
+  .nl input[aria-invalid="true"] { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(201, 68, 14, .25); }
+  .nl__fin { display: grid; gap: .5rem; }
+  .nl__fin[hidden] { display: none; }
+  .nl__fin h3 { font-size: 1.5rem; }
+
+  /* ---------- Pied de page ---------- */
+  .pied { background: var(--vert-fonce); color: var(--blanc); padding: 48px clamp(20px, 5vw, 64px) 36px; }
+  .pied__grille { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 28px 64px; justify-content: space-between; align-items: flex-start; }
+  .pied nav { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; }
+  .pied a { text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+  .pied nav a { color: var(--lime); font-weight: 800; }
+  .pied__bas { max-width: 1120px; margin: 32px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.25); font-size: .88rem; display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; }
+  .pied__bas a { color: var(--blanc); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .hero__grille { grid-template-columns: 1fr; padding-bottom: 150px; }
+    .hero h1 { max-width: 20ch; }
+    .couverture { margin-top: 1.5rem; }
+  }
+  @media (max-width: 480px) {
+    .btn { width: 100%; justify-content: center; }
+    .nl__actions .btn { width: 100%; }
+    .hero::after { width: 90%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal, .btn { transition: none; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="hero__bar">
+    <div class="topbar">
+      <!-- À remplacer par l'URL du site final -->
+      <a class="logo-lien" href="#" aria-label="Maison La Recette, retour au site">
+        <img class="logo logo--haut" src="assets/logo-maison-la-recette.png" alt="Maison La Recette" width="184" height="149">
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__grille">
+    <div>
+      <span class="tag">Maison La Recette, alimentation durable à Lyon</span>
+
+      <h1>Et si votre prochain événement d'équipe se passait autour d'une table&nbsp;?</h1>
+
+      <p class="hero__sous-titre">
+        Cinq expériences food éco-responsables à vivre avec vos équipes, dans vos locaux ou chez nos chefs, artisans et producteurs. Sans leçon de morale, promis.
+      </p>
+    </div>
+
+    <div class="hero__visuel">
+      <div class="couverture" aria-hidden="true">
+        <div class="couverture__forme"></div>
+        <div class="autocollant">Guide<br>gratuit</div>
+        <div class="livre">
+          <div class="livre__titre">Team building et séminaires</div>
+          <p class="livre__sous">5 expériences food éco-responsables pour vos équipes</p>
+          <div class="livre__table">
+            <svg viewBox="0 0 290 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+              <!-- Deux petites assiettes -->
+              <g>
+                <circle cx="96" cy="84" r="46" fill="#61AF89"/>
+                <circle cx="96" cy="84" r="29" fill="none" stroke="#295140" stroke-width="3"/>
+              </g>
+              <g>
+                <circle cx="196" cy="70" r="38" fill="#61AF89"/>
+                <circle cx="196" cy="70" r="24" fill="none" stroke="#295140" stroke-width="3"/>
+              </g>
+            </svg>
+          </div>
+          <img class="logo logo--livre" src="assets/logo-maison-la-recette.png" alt="" width="184" height="149">
+        </div>
+      </div>
+
+      <div class="hero__action">
+        <!-- Placer le PDF dans le dossier assets/ du dépôt GitHub (même nom de fichier) -->
+        <a class="btn" href="assets/guide-team-building-food-eco-responsable.pdf" download data-guide aria-controls="newsletter-panel" aria-expanded="false">
+          Je télécharge le guide
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+        </a>
+        <p class="hero__rassurance">Gratuit, au format PDF, sans inscription.</p>
+      </div>
+
+      <div class="reveal" id="newsletter-panel">
+        <div class="reveal__inner" inert>
+          <section class="nl" id="nl" aria-labelledby="nl-titre" tabindex="-1">
+            <p class="nl__merci">
+              Merci ! Votre guide se télécharge. Il ne s'ouvre pas ?
+              <a href="assets/guide-team-building-food-eco-responsable.pdf" download>Cliquez ici</a>.
+            </p>
+
+            <div id="nl-question">
+              <h2 id="nl-titre">Un petit goût de reviens-y ?</h2>
+              <p class="nl__texte">
+                Chaque mois, recevez en avant-première les dates de nos prochaines expériences à Lyon : ateliers, food tours et immersions.
+              </p>
+
+              <form class="nl__form" id="nl-form" novalidate>
+                <input type="hidden" name="segment" value="lead-magnet-seminaire">
+                <div>
+                  <label class="champ" for="email">Votre adresse e-mail professionnelle</label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="prenom.nom@entreprise.fr" required>
+                </div>
+                <label class="consentement">
+                  <input type="checkbox" name="consentement" required>
+                  <span>J'accepte de recevoir la newsletter de Maison La Recette. Je peux me désinscrire à tout moment.</span>
+                </label>
+                <p class="nl__erreur" id="nl-erreur" role="alert"></p>
+                <div class="nl__actions">
+                  <button class="btn" type="button" id="nl-envoi">Oui, tenez-moi au jus !</button>
+                  <button class="lien-discret" type="button" id="nl-refus">Non merci, ça ira</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="nl__fin" id="nl-fin" hidden aria-live="polite">
+              <h3 id="nl-fin-titre"></h3>
+              <p id="nl-fin-texte"></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<footer class="pied">
+  <div class="pied__grille">
+    <a class="logo-lien" href="#" aria-label="Maison La Recette, retour au site">
+      <img class="logo logo--pied" src="assets/logo-maison-la-recette.png" alt="Maison La Recette" width="184" height="149">
+    </a>
+    <nav aria-label="Nos réseaux">
+      <a href="https://www.instagram.com/larecette_maison/" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/la-recette-les-ingredients-du-changement/" rel="noopener">LinkedIn</a>
+      <!-- À compléter : lien YouTube et lien du site -->
+    </nav>
+  </div>
+  <div class="pied__bas">
+    <span>© 2026 Maison La Recette</span>
+    <!-- À compléter : liens vers les pages légales du site -->
+    <a href="#">Mentions légales</a>
+    <a href="#">Politique de confidentialité</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // URL du service d'envoi d'e-mails (Brevo, MailerLite, Mailchimp...). Tant qu'elle est vide, les inscriptions ne sont PAS enregistrées.
+    var NEWSLETTER_ENDPOINT = "";
+
+    var reduit = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var panneau = document.getElementById("newsletter-panel");
+    var inner = panneau.querySelector(".reveal__inner");
+    var carte = document.getElementById("nl");
+    var boutons = document.querySelectorAll("[data-guide]");
+    var form = document.getElementById("nl-form");
+    var erreur = document.getElementById("nl-erreur");
+    var envoi = document.getElementById("nl-envoi");
+    var question = document.getElementById("nl-question");
+    var fin = document.getElementById("nl-fin");
+
+    function ouvrir() {
+      if (!panneau.classList.contains("est-ouvert")) {
+        panneau.classList.add("est-ouvert");
+        inner.removeAttribute("inert");
+        boutons.forEach(function (b) { b.setAttribute("aria-expanded", "true"); });
+      }
+      setTimeout(function () {
+        carte.focus({ preventScroll: true });
+        panneau.scrollIntoView({ behavior: reduit ? "auto" : "smooth", block: "center" });
+      }, 200);
+    }
+
+    // Le téléchargement démarre via le lien ; on affiche en plus la question newsletter.
+    boutons.forEach(function (b) { b.addEventListener("click", ouvrir); });
+
+    function terminer(titre, texte) {
+      question.hidden = true;
+      document.getElementById("nl-fin-titre").textContent = titre;
+      document.getElementById("nl-fin-texte").textContent = texte;
+      fin.hidden = false;
+      fin.setAttribute("tabindex", "-1");
+      fin.focus({ preventScroll: true });
+      fin.scrollIntoView({ behavior: reduit ? "auto" : "smooth", block: "nearest" });
+    }
+
+    function signaler(message, champ) {
+      erreur.textContent = message;
+      form.elements.email.setAttribute("aria-invalid", champ === "email" ? "true" : "false");
+      erreur.scrollIntoView({ behavior: reduit ? "auto" : "smooth", block: "nearest" });
+      if (champ === "email") form.elements.email.focus({ preventScroll: true });
+    }
+
+    document.getElementById("nl-refus").addEventListener("click", function () {
+      terminer("Pas de souci, bonne lecture !", "Nos prochains ateliers, food tours et immersions à Lyon vous attendent sur notre site, quand vous voudrez.");
+    });
+
+    function soumettre() {
+      erreur.textContent = "";
+      var email = form.elements.email;
+      email.setAttribute("aria-invalid", "false");
+      if (!email.value.trim() || !email.checkValidity()) {
+        signaler("Indiquez votre adresse e-mail pour recevoir les dates de nos prochaines expériences.", "email");
+        return;
+      }
+      if (!form.elements.consentement.checked) {
+        signaler("Cochez la case ci-dessus pour confirmer votre inscription.", "consentement");
+        return;
+      }
+
+      envoi.disabled = true;
+      var succes = function () {
+        terminer("Merci, vous êtes au jus !", "Vous recevrez bientôt les dates de nos prochains ateliers, food tours et immersions à Lyon. Surveillez votre boîte mail.");
+      };
+
+      if (!NEWSLETTER_ENDPOINT) {
+        console.warn("NEWSLETTER_ENDPOINT est vide : l'inscription n'a pas été enregistrée (mode démo).");
+        succes();
+        return;
+      }
+      fetch(NEWSLETTER_ENDPOINT, { method: "POST", body: new FormData(form), mode: "no-cors" })
+        .then(succes)
+        .catch(function () {
+          envoi.disabled = false;
+          erreur.textContent = "L'inscription n'a pas fonctionné. Réessayez dans un instant.";
+        });
+    }
+
+    // Clic direct : fonctionne même quand l'envoi natif d'un formulaire est bloqué (aperçus intégrés, iframes sandboxées).
+    envoi.addEventListener("click", soumettre);
+    form.elements.email.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); soumettre(); }
+    });
+    form.addEventListener("submit", function (e) { e.preventDefault(); soumettre(); });
+  })();
+</script>
+</body>
+</html>
